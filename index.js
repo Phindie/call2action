@@ -52,7 +52,6 @@ function errorHandler(err, req, res, next) {
 
 app.get('/', routes.home);
 app.get('/contacts', routes.showContacts);
-app.get('/events', routes.showEvents);
 app.get('/staff', routes.showStaff);
 app.post('/contactUs', routes.contactForm);
 app.post('/report', routes.report);

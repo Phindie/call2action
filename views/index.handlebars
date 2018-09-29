@@ -1,28 +1,36 @@
 <div class="super_container">
   <div class="home">
 
-    <div class="home_container">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="home_content">
-              <div class="home_title">Let's break the silence!</div>
-              <div class="home_text">
-                Look over the following questions and signs of domestic abuse. Think about
-                how you are being treated and how you treat your partner. Remember, when
-                one person scares, hurts or continually puts down the other person</div>
-              <div class="button home_button"><a href="#stuff"><span>Get Help</span><span>Get
-                    Help</span></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <form action="/home" method="POST">
+      <div class="row"id="input">
+    <div class="four columns">
+      <b>Add Story:</b> <textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
     </div>
   </div>
+       <div class="row"id="input">
+    <div class="four columns">
+      <b>Previous Story:</b><textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
 
+    </div>
+  </div>
+  <div class="row"id="Button">
+    <div class="columns">
+     <button type="private" class="footer_contact_button" href="#">Private</button>
+    </div>
+    {{!-- <div class="columns">
+      <button type="public" class="footer_contact_button" href="#">Public</button>
+    </div> --}}
+  </div>
+
+  <a href ="/story">GetHelp</a>
+
+    </form>
+    </div>
+    </div>
+ 
   <!-- FAQ & News -->
 
-  <div class="stuff" id="stuff">
+  {{!-- <div class="stuff" id="stuff">
     <div class="container">
       <div class="row">
         <form action="/report" method="POST">
@@ -108,7 +116,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <div class="footer_bar">
     <div class="container">

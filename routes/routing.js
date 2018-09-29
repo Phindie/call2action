@@ -16,14 +16,14 @@ module.exports = function () {
       res.send(err.stack);
     }
   }
-  async function showEvents(req, res) {
-    try {
+  // async function showEvents(req, res) {
+  //   try {
 
-      res.render('event');
-    } catch (err) {
-      res.send(err.stack);
-    }
-  }
+  //     res.render('event');
+  //   } catch (err) {
+  //     res.send(err.stack);
+  //   }
+  // }
   async function showStaff(req, res) {
     try {
 
@@ -77,7 +77,7 @@ module.exports = function () {
   return {
     home,
     showContacts,
-    showEvents,
+  
     showStaff,
     contactForm,
     report,
