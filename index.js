@@ -39,33 +39,35 @@ let local = process.env.LOCAL || false;
 if (process.env.DATABASE_URL && !local) {
   useSSL = true;
 }
+
 // which db connection to use
-const connectionString = process.env.DATABASE_URL || 'postgresql://coder:pg123@localhost:5432/rejuvunateDB';
+const connectionString = process.env.DATABASE_URL || 'postgresql://coder:coder@localhost:5432/user_table';
 
 const pool = new Pool({
   connectionString,
   ssl: useSSL
 });
 
-const routes = Rounting();
+const routes = Rounting(pool);
 
-async function dashboard(req, res) {
-    app.get('/user/:username/dashboard', routes.home);
-    app.post('/story/add/:username', routes.addStory);
-    app.post('/story/:id/make_public/:username', routes.makeStoryPublic);
+// grant all privileges on database my_products to coder;
+ 
+app.get('/user/:username/dashboard', routes.dashboard);
+app.post('/story/add/:username', routes.addStory);
+app.post('/story/:id/make_public/:username', routes.makeStoryPublic);
 
-    // show a users dashboard. Allow user to add stories & to see all there stories and to make some stories public
-    app.get('/stories/:username', routes.getStories);
+// show a users dashboard. Allow user to add stories & to see all there stories and to make some stories public
+app.get('/stories/:username', routes.getStories);
 
-    app.get('/statistics', routes.statistics);
+// app.get('/statistics', routes.statistics);
 
-    // app.post('/getHelp', routes.getHelp);
-    // app.get('/shelters',routes.shelters);
-    // app.get('/chat',routes.chattRoom);
-    // app.get('/chat/dashboard',routes.chatRoomDashboard);
+// app.post('/getHelp', routes.getHelp);
+// app.get('/shelters',routes.shelters);
+// app.get('/chat',routes.chattRoom);
+// app.get('/chat/dashboard',routes.chatRoomDashboard);
 
 
-    const PORT = 2018;
-    app.listen(PORT, function () {
-      console.log('Listening to port.... ' + PORT);
-    });
+const PORT = 2018;
+app.listen(PORT, function () {
+  console.log('Listening to port.... ' + PORT);
+});
