@@ -9,7 +9,6 @@ module.exports = function (pool) {
       if (user) {
         let userStoryResults = await pool.query('select * from stories where users_id = $1 order by id desc', [user.id]);
         stories = userStoryResults.rows;
-        console.log(stories);
       }
 
       res.render('index', {
