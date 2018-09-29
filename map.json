@@ -1,0 +1,73 @@
+[
+    {
+        "locationHandler": "Western Cape",
+        "name":"Athlone House ",
+        "location": "Paarl – Wineland Overberg ,NPO ,30,Ms Mitchell Palmer",
+        "contacts":"021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name":"L’Abri De Dieu Safe House",
+        "location": "Paarl ,NPO ,10,Ms Mitchell Palmer",
+        "contacts":"021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name" : "Care Haven Centre",
+        "location" : "Athlone Metro South, NPO ,50,Ms Mitchell Palmer",
+        "contacts":"021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name":"Malitswai One Stop Centre",
+        "location": "Joe Gqabi ,NPO ,6,Ms Mitchell Palmer",
+        "contacts":"021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name":"Saartjie Baartman Centre for Women and Children",
+        "location": "Athlone Metro South ,NPO ,60,Ms Mitchell Palmer",
+        "contacts": "021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name":"Place of Hope",
+        "location": " Lansdowne Athlone Metro South ,NPO ,25,Ms Mitchell Palmer",
+        "contacts":"021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name":"Creative Effective Families shelter for Victims of Violence",
+        "location": "George ,NPO ,33,Ms Mitchell Palmer",
+        "contacts": "021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name":"Rosemoore Refuge for Battered Women Phambili",
+        "location": ",George ,NPO ,25,Ms Mitchell Palmer",
+        "contacts": "021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name":"Nonceba Shelter",
+        "location": " Khayelitsha ,NPO, 10,Ms Mitchell Palmer",
+        "contacts": "021 483 4405,082 560 840"
+    },
+    {
+        "locationHandler": "Western Cape",
+        "name":"Ilitha Labantu",
+        "location": "26A Ny 22 St, Guguletu, Heideveld, 7750",
+        "contacts": "021 633 2383"
+    },{
+        "locationHandler": "Western Cape",
+        "name":"Sisters Incorporated ",
+        "location": "Wynberg ,NPO ,28,Ms Mitchell Palmer",
+        "contacts": "021 483 4405,082 560 840"
+    },{
+        "locationHandler": "Western Cape",
+        "name":"St Annes Homes",
+        "location": "Cape Town ,NPO ,20,Ms Mitchell Palmer",
+        "contacts": "021 483 4405,082 560 840"
+    }
+
+]

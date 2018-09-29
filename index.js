@@ -44,7 +44,6 @@ const pool = new Pool({
 
 const routes = Rounting();
 
-<<<<<<< HEAD
   function errorHandler(err, req, res, next) {
     res.status(500);
     res.render('error', { error: err });
@@ -53,23 +52,6 @@ const routes = Rounting();
 
 app.get('/', routes.home);
 app.get('/login', routes.loginPage);
-=======
-function errorHandler(err, req, res, next) {
-  res.status(500);
-  res.render('error', { error: err });
-}
-
-
-app.get('/', routes.home);
-app.get('/contacts', routes.showContacts);
-app.get('/events', routes.showEvents);
-app.get('/staff', routes.showStaff);
-app.post('/contactUs', routes.contactForm);
-app.post('/report', routes.report);
-app.get('/signUp', routes.signUp);
-app.post('/sign', routes.up)
-
->>>>>>> b1c8de5fe07dd8b428bafc2036806756b72a8122
 
 const PORT = 2018;
 app.listen(PORT, function () {
