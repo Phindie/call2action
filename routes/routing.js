@@ -1,5 +1,4 @@
 module.exports = function () {
-
   async function home(req, res) {
     try {
 
@@ -84,4 +83,5 @@ module.exports = function () {
     signUp,
     up
   }
+
 }

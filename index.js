@@ -2,7 +2,7 @@
 
 const express = require('express');
 const handleBars = require('express-handlebars');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const flash = require('express-flash');
 const session = require('express-session');
 const pg = require("pg");
@@ -12,6 +12,7 @@ const Pool = pg.Pool;
 const app = express();
 
 app.engine('handlebars', handleBars({defaultLayout: 'main'}));
+
 app.set('view engine', 'handlebars');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -44,19 +45,29 @@ const pool = new Pool({
 
 const routes = Rounting();
 
-function errorHandler(err, req, res, next) {
-  res.status(500);
-  res.render('error', { error: err });
-}
+  function errorHandler(err, req, res, next) {
+    res.status(500);
+    res.render('error', { error: err });
+    }
 
 
-app.get('/', routes.home);
-app.get('/contacts', routes.showContacts);
-app.get('/staff', routes.showStaff);
-app.post('/contactUs', routes.contactForm);
-app.post('/report', routes.report);
-app.get('/signUp', routes.signUp);
-app.post('/sign', routes.up)
+// app.get('/user/:username', routes.home);
+
+app.post('/story/add/:username', routes.addStory);
+app.post('/story/:id/make_public/:username', routes.makeStoryPublic);
+
+app.get('/user/:username/dashboard', routes.home); // show a users dashboard. Allow user to add stories & to see all there stories and to make some stories public
+app.get('/stories/:username',routes.getStories);
+
+app.get('/statistics', routes.statistics);
+
+
+
+// app.post('/getHelp', routes.getHelp);
+// app.get('/shelters',routes.shelters);
+// app.get('/chat',routes.chattRoom);
+// app.get('/chat/dashboard',routes.chatRoomDashboard);
+
 
 
 const PORT = 2018;
