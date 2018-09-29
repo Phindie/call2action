@@ -107,16 +107,52 @@ module.exports = function (pool) {
       res.send(err.stack);
     }
   }
-function findShelters(req,res){
+
+  function findShelters(req,res){
     res.render("shelters", {shelters})
-}
+  }
+
+  function filterShelters(req,res){
+
+    let searchQuery = req.params.search.toLowerCase();
+    
+    let filteredResults = shelters.filter(function(shelter){
+
+      const safeVal = (val) => {
+        if (val) {
+          return val.toLowerCase();
+        }
+        return '';
+      }
+
+      let location = safeVal(shelter.locationHandler);
+      let shelterName = safeVal(shelter.name);
+      let shelterLocation = safeVal(shelter.location);
+      let contactPerson = safeVal(shelter.contact_person);
+
+      let result = (location.indexOf(searchQuery) > -1)
+        || (shelterName.indexOf(searchQuery) > -1 )
+        || (shelterLocation.indexOf(searchQuery) > -1)
+        || (contactPerson.indexOf(searchQuery) > -1)
+      
+      return result;
+    });
+
+    res.render("shelter-list", {
+      shelters: filteredResults,
+      layout: 'none'
+    })
+  }
+
+
   return {
     dashboard,
     addStory,
     makeStoryPublic,
     getStories,
     statistics,
-    findShelters
+    findShelters,
+    filterShelters
   }
 
 }

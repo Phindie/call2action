@@ -60,6 +60,8 @@ app.post('/story/:id/make_public/:username', routes.makeStoryPublic);
 app.get('/stories/:username', routes.getStories);
 
 app.get('/shelters',routes.findShelters)
+app.get('/shelters/filter/:search', routes.filterShelters)
+
 app.get('/', function(req, res) {
   res.render('login', {layout : 'login'});
 });
