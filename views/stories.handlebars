@@ -1,9 +1,28 @@
 
 <h1>stories</h1>
-<ul>
+<div class="row">
 
-{{#each stories}}
-    <li>{{content}}</li>
-{{/each}}
+    <blockquote class="blockquote">
+        <p class="mb-0">Stories heal! It helps you to realise you are not alone.</p>
+          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+</div>
+<div class="row">
+    {{#each stories}}
+    <div class="card">
+      <div class="card-header">
+        Story
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{content}}</p>
 
-</ul>
+          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+    {{/each}}
+</div>
+<div class="row">
+    <a href="/user/{{username}}/dashboard">Why not write your own story?</a>
+</div>

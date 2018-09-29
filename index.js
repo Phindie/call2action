@@ -59,6 +59,15 @@ app.post('/story/:id/make_public/:username', routes.makeStoryPublic);
 // show a users dashboard. Allow user to add stories & to see all there stories and to make some stories public
 app.get('/stories/:username', routes.getStories);
 
+app.get('/', function(req, res) {
+  res.render('login', {layout : 'login'});
+});
+
+app.post('/login', function(req, res) {
+  let username = req.body.username;
+  res.redirect(`/user/${username}/dashboard`);
+});
+
 // app.get('/statistics', routes.statistics);
 
 // app.post('/getHelp', routes.getHelp);

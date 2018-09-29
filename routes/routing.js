@@ -74,11 +74,14 @@ module.exports = function (pool) {
 
   async function getStories(req, res) {
     try {
-
+      let username = req.params.username;
       let storyResults = await pool.query('select * from stories where is_public = true order by id desc');
       let stories = storyResults.rows;
       
-      res.render('stories', {stories});
+      res.render('stories', {
+        stories,
+        username
+      });
     } catch (err) {
       res.send(err.stack);
     }
