@@ -1,3 +1,5 @@
+const shelters = require('../shelters.json');
+
 module.exports = function (pool) {
   async function dashboard(req, res) {
 
@@ -103,13 +105,16 @@ module.exports = function (pool) {
       res.send(err.stack);
     }
   }
-
+function findShelters(req,res){
+    res.render("shelters", {shelters})
+}
   return {
     dashboard,
     addStory,
     makeStoryPublic,
     getStories,
-    statistics
+    statistics,
+    findShelters
   }
 
 }

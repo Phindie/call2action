@@ -1,0 +1,26 @@
+<h1>shelters</h1>
+<form action="">
+<div  class=" input-group mb-3">
+    <input type="text" style="width:50%;" class="form-control input address" placeholder="Search shelters by province..." aria-label="Recipient's username"
+        aria-describedby="basic-addon2">
+    <div class="input-group-append ">
+        <button class="btn btn-outline-secondary form-control" type="submit">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+    </div>
+    </form>
+    <div class="card-columns">
+        {{#each shelters}}
+        <div class="card p-3 text-center">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text">{{location}}</p>
+                <p class="card-text">
+                    <small class="text-muted">{{contacts}}</small>
+                </p>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>

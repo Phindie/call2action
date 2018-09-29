@@ -59,6 +59,8 @@ app.post('/story/:id/make_public/:username', routes.makeStoryPublic);
 // show a users dashboard. Allow user to add stories & to see all there stories and to make some stories public
 app.get('/stories/:username', routes.getStories);
 
+app.get('/shelters',routes.findShelters)
+
 // app.get('/statistics', routes.statistics);
 
 // app.post('/getHelp', routes.getHelp);

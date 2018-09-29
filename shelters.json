@@ -2,43 +2,50 @@
     {
         "locationHandler": "Western Cape",
         "name":"Athlone House ",
-        "location": "Paarl – Wineland Overberg ,NPO ,30,Ms Mitchell Palmer",
+        "location": "Paarl – Wineland Overberg ,NPO ,30",
+        "contact person":"Ms Mitchell Palmer",
         "contacts":"021 483 4405,082 560 840"
     },
     {
         "locationHandler": "Western Cape",
         "name":"L’Abri De Dieu Safe House",
-        "location": "Paarl ,NPO ,10,Ms Mitchell Palmer",
+        "location": "Paarl ,NPO ,10",
+        "contact person":"Ms Mitchell Palmer",
         "contacts":"021 483 4405,082 560 840"
     },
     {
         "locationHandler": "Western Cape",
         "name" : "Care Haven Centre",
-        "location" : "Athlone Metro South, NPO ,50,Ms Mitchell Palmer",
+        "location" : "Athlone Metro South, NPO ,50",
+        "contact person":"Ms Mitchell Palmer",
         "contacts":"021 483 4405,082 560 840"
     },
     {
         "locationHandler": "Western Cape",
         "name":"Malitswai One Stop Centre",
-        "location": "Joe Gqabi ,NPO ,6,Ms Mitchell Palmer",
+        "location": "Joe Gqabi ,NPO ,6",
+        "contact person":"Ms Mitchell Palmer",
         "contacts":"021 483 4405,082 560 840"
     },
     {
         "locationHandler": "Western Cape",
         "name":"Saartjie Baartman Centre for Women and Children",
-        "location": "Athlone Metro South ,NPO ,60,Ms Mitchell Palmer",
+        "location": "Athlone Metro South ,NPO ,60",
+        "contact person":"Ms Mitchell Palmer",
         "contacts": "021 483 4405,082 560 840"
     },
     {
         "locationHandler": "Western Cape",
         "name":"Place of Hope",
-        "location": " Lansdowne Athlone Metro South ,NPO ,25,Ms Mitchell Palmer",
+        "location": " Lansdowne Athlone Metro South ,NPO ,25",
+        "contact person":"Ms Mitchell Palmer",
         "contacts":"021 483 4405,082 560 840"
     },
     {
         "locationHandler": "Western Cape",
         "name":"Creative Effective Families shelter for Victims of Violence",
-        "location": "George ,NPO ,33,Ms Mitchell Palmer",
+        "location": "George ,NPO ,33",
+        "contact person":"Ms Mitchell Palmer",
         "contacts": "021 483 4405,082 560 840"
     },
     {
@@ -50,7 +57,8 @@
     {
         "locationHandler": "Western Cape",
         "name":"Nonceba Shelter",
-        "location": " Khayelitsha ,NPO, 10,Ms Mitchell Palmer",
+        "location": " Khayelitsha ,NPO, 10",
+        "contact person":"Ms Mitchell Palmer",
         "contacts": "021 483 4405,082 560 840"
     },
     {
@@ -61,13 +69,32 @@
     },{
         "locationHandler": "Western Cape",
         "name":"Sisters Incorporated ",
-        "location": "Wynberg ,NPO ,28,Ms Mitchell Palmer",
+        "location": "Wynberg ,NPO ,28",
+        "contact person":"Ms Mitchell Palmer",
         "contacts": "021 483 4405,082 560 840"
     },{
         "locationHandler": "Western Cape",
         "name":"St Annes Homes",
-        "location": "Cape Town ,NPO ,20,Ms Mitchell Palmer",
+        "location": "Cape Town ,NPO ,20",
+        "contact person":"Ms Mitchell Palmer",
         "contacts": "021 483 4405,082 560 840"
+    },{
+        "locationHandler": "Northern Cape",
+        "name":"St Annes Homes",
+        "location": "Upington, Siyanda District ,NPO ,20",
+        "contact person":"Ms. Portia Qondani",
+        "contacts": "053 874 9263,079 527 5951"
+    },{
+        "locationHandler": "Northern Cape",
+        "name":"Bopanang One Stop Centre",
+        "location": "Upington, Siyanda District,State run (DSD) ,20,Ms Mitchell Palmer",
+        "contact person":"Ms. Portia Qondani",
+        "contacts": "053 874 9263,079 527 5951"
+    },{
+        "locationHandler": "Northern Cape",
+        "name":"St Annes Homes",
+        "location": "Cape Town ,NPO ,20,Ms Mitchell Palmer",
+        "contacts": "053 874 9263,079 527 5951"
     }
 
 ]
