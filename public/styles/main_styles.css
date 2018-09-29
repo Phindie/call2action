@@ -34,14 +34,13 @@ footer_bar_content
 logo
 *
 home_button
-background_image
-{
-	/* margin: 0;
-	padding: 0; */
+background_image{
+	margin: 0;
+	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
-	/* height: 100%; */
+	height: 50%;
 }
 body
 {
@@ -248,7 +247,11 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
+<<<<<<< HEAD
 	height: 65%;
+=======
+	height: 100%;
+>>>>>>> b1c8de5fe07dd8b428bafc2036806756b72a8122
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -829,10 +832,16 @@ span
 .home_container
 {
 	position: absolute;
+<<<<<<< HEAD
 	top: 18%;
 	left: 0;
 	width: 100%;
 	height: 100%;
+=======
+	top: 38%;
+	left: 0;
+	width: 100%;
+>>>>>>> b1c8de5fe07dd8b428bafc2036806756b72a8122
 }
 .home_content
 {

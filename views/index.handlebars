@@ -1,246 +1,137 @@
 <div class="super_container">
-  <!-- Home -->
-
   <div class="home">
-    <div class="background_image" style="background-image:url(images/power.jpg)"></div>
-
-    <!-- Header -->
-
-    <header class="header" id="header">
-      <div class="background_image" style="background-image:url(images/abs.jpg)"></div>
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-        <div class="logo mr-5">
-          <a href="#">Rejuvun<span id="eight">8</span><img src="images/speech.png" width="70" height="70"></span></a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Page links
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/about">About</a>
-                <a class="dropdown-item" href="/report">Report Abuse</a>
-            </li>
-            <li>
-              <a href="/login" class="nav-link">Login Page</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
-
-    </header>
 
     <div class="home_container">
+      <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col">
             <div class="home_content">
               <div class="home_title">Let's break the silence!</div>
               <div class="home_text">
                 Look over the following questions and signs of domestic abuse. Think about
                 how you are being treated and how you treat your partner. Remember, when
-                one person scares, hurts or continually puts down the other person, it's abuse.</div>
-              <div class="button home_button"><a href="#stuff"><span>Get Help</span><span>Get
-                    Help</span></a></div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
 
+                <!-- FAQ & News -->
 
-  <!-- FAQ & News -->
-  <div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <p>"When I was going through this abuse I remained silent about what was going on in my home and I believe that
-        it was my silence that enabled him to continue with the abuse. We have to break the silence and expose those who seek to keep us bound in fear and dread".
-      </p>
-    </div>
+                <div class="stuff" id="stuff">
+                  <div class="container">
+                    <div class="row">
+                      <form action="/report" method="POST">
+                        <div class="col-lg-7">
+                          <div class="faq">
+                            <div class="faq_title">Types of abuse:</div>
+                            <div class="faq_subtitle">choose better and easy way to get help or express
+                              your feelings:</div>
+                            <div class="elements_accordions">
+                              <div class="accordions">
 
-    <div class="col-md-4">
-      <p>"When I was going through this abuse I remained silent about what was going on in my home and I believe that
-        it was my silence that enabled him to continue with the abuse. We have to break the silence and expose those who seek to keep us bound in fear and dread".
-      </p>
-    </div>
+                                <div class="accordion_container">
+                                  <div class="accordion d-flex flex-row align-items-center">
+                                    <div>Emotional abuse</div>
+                                  </div>
+                                  <div class="accordion_panel">
+                                    <div>
+                                      <h6>Emotional abuse includes non-physical behaviors such as threats,
+                                        insults, constant monitoring or “checking in,” excessive texting,
+                                        humiliation, intimidation, isolation or stalking.
+                                        There are many behaviors that qualify as emotional or verbal abuse,
+                                        including:</h6>
+                                      <input type="checkbox" name="" value="">Telling you what to do and
+                                      wear.</br>
+                                      <input type="checkbox" name="" value="">Blaming your actions for
+                                      their abusive or unhealthy behavior.</br>
+                                      <input type="checkbox" name="" value="">Threatening to commit suicide
+                                      to keep you from breaking up with them.</b>
+                                      <textarea class="footer_contact_input footer_contact_textarea" placeholder="Message"
+                                        required="required"></textarea>
 
+                                    </div>
+                                  </div>
+                                </div>
 
-    <div class="col-md-4">
-    <p>"When I was going through this abuse I remained silent about what was going on in my home and I believe that
-        it was my silence that enabled him to continue with the abuse. We have to break the silence and expose those who seek to keep us bound in fear and dread".
-      </p>
-    </div>
-  </div>
-  </div>
-</div>
+                                <div class="accordion_container">
+                                  <div class="accordion d-flex flex-row align-items-center">
+                                    <div>Phyisical abuse</div>
+                                  </div>
+                                  <div class="accordion_panel">
+                                    <h6>Physical abuse is any intentional and unwanted contact with you or
+                                      something close to your body. Sometimes abusive behavior does not
+                                      cause pain or even leave a bruise, but it’s still unhealthy. Examples
+                                      of physical abuse include:</h6>
+                                    <input type="checkbox" name="" value="">Scratching, punching, biting,
+                                    strangling or kicking</br>
+                                    <input type="checkbox" name="" value="">Grabbing your face to make you
+                                    look at them.</br>
+                                    <input type="checkbox" name="" value="">Grabbing you to prevent you
+                                    from leaving or to force you to go somewhere.</br>
+                                    <textarea class="footer_contact_input footer_contact_textarea" placeholder="Message"
+                                      required="required"></textarea>
 
+                                  </div>
+                                </div>
 
+                                <div class="accordion_container">
+                                  <div class="accordion d-flex flex-row align-items-center">
+                                    <div>Sexual Abuse</div>
+                                  </div>
+                                  <div class="accordion_panel">
+                                    <div>
+                                      <h6>Sexual abuse refers to any action that pressures or coerces
+                                        someone to do something sexually they don’t want to do. It can also
+                                        refer to behavior that impacts a person’s ability to control their
+                                        sexual activity or the circumstances in which sexual activity
+                                        occurs, including oral sex, rape or restricting access to birth
+                                        control and condoms.</h6>
+                                      <input type="checkbox" name="" value="">Unwanted kissing or touching.</br>
+                                      <input type="checkbox" name="" value="">Unwanted kissing or touching.</br>
+                                      <input type="checkbox" name="" value="">Pressuring or forcing someone
+                                      to have sex or perform sexual acts.</br>
+                                      <textarea class="footer_contact_input footer_contact_textarea" placeholder="Message"
+                                        required="required"></textarea>
 
+                                    </div>
+                                  </div>
+                                </div>
 
+                              </div><br>
+                              <button type="submit" class="footer_contact_button" href="#">submit</button>
 
-
-
-
-
- <div class="stuff" id="stuff">
-    <div class="container">
-      <div class="row">
-
-        <!-- FAQ -->
-        <div class="col-lg-7">
-          <div class="faq">
-            <div class="faq_title">Types of abuse:</div>
-            <div class="faq_subtitle">choose better and easy way to get help or express
-              your feelings:</div>
-            <div class="elements_accordions">
-              <div class="accordions">
-
-                <div class="accordion_container">
-                  <div class="accordion d-flex flex-row align-items-center active">
-                    <div>Emotional abuse</div>
-                  </div>
-                  <div class="accordion_panel">
-                    <div>
-                      <h6>Emotional abuse includes non-physical behaviors such as threats,
-                        insults, constant monitoring or “checking in,” excessive texting,
-                        humiliation, intimidation, isolation or stalking.
-                        There are many behaviors that qualify as emotional or verbal abuse,
-                        including:</h6>
-                      <input type="checkbox" name="" value="">Telling you what to do and
-                      wear.</br>
-                      <input type="checkbox" name="" value="">Blaming your actions for
-                      their abusive or unhealthy behavior.</br>
-                      <input type="checkbox" name="" value="">Threatening to commit suicide
-                      to keep you from breaking up with them.</b>
-                      <textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
-
+                            </div>
+                          </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
 
-                <div class="accordion_container">
-                  <div class="accordion d-flex flex-row align-items-center">
-                    <div>Phyisical abuse</div>
-                  </div>
-                  <div class="accordion_panel">
-                    <h6>Physical abuse is any intentional and unwanted contact with you or
-                      something close to your body. Sometimes abusive behavior does not
-                      cause pain or even leave a bruise, but it’s still unhealthy. Examples
-                      of physical abuse include:</h6>
-                    <input type="checkbox" name="" value="">Scratching, punching, biting,
-                    strangling or kicking</br>
-                    <input type="checkbox" name="" value="">Grabbing your face to make you
-                    look at them.</br>
-                    <input type="checkbox" name="" value="">Grabbing you to prevent you
-                    from leaving or to force you to go somewhere.</br>
-                    <textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
+                <div class="footer_bar">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <div class="footer_bar_content d-flex flex-sm-row flex-column align-items-lg-center align-items-start justify-content-start">
 
-                  </div>
-                </div>
+                          <div class="col-lg-5 footer_col">
+                            <div class="copyright">
 
-                <div class="accordion_container">
-                  <div class="accordion d-flex flex-row align-items-center">
-                    <div>Sexual Abuse</div>
-                  </div>
-                  <div class="accordion_panel">
-                    <div>
-                      <h6>Sexual abuse refers to any action that pressures or coerces
-                        someone to do something sexually they don’t want to do. It can also
-                        refer to behavior that impacts a person’s ability to control their
-                        sexual activity or the circumstances in which sexual activity
-                        occurs, including oral sex, rape or restricting access to birth
-                        control and condoms.</h6>
-                      <input type="checkbox" name="" value="">Unwanted kissing or touching.</br>
-                      <input type="checkbox" name="" value="">Unwanted kissing or touching.</br>
-                      <input type="checkbox" name="" value="">Pressuring or forcing someone
-                      to have sex or perform sexual acts.</br>
-                      <textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
+                              <div class="footer_social">
+                                <ul class="d-flex flex-row align-items-center justify-content-start">
+                                  <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                  <div>Copyright &copy;2018 by BabesGotByte</div>
+                                </ul>
 
+                              </div>
+
+                            </div>
+
+                          </div>
+
+
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-
-              </div><br>
-              <button class="footer_contact_button" href="#">submit</button>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- Latest News -->
-        {{!-- <div class="col-lg-5">
-          <div class="news">
-
-            <div class="news_container">
-              <div class="footer_contact_title">Quick Contact</div>
-              <div class="footer_contact">
-
-                <div class="footer_contact_form_container">
-                  <form action="#" class="footer_contact_form" id="footer_contact_form">
-                    <div class="d-flex flex-xl-row flex-column align-items-center justify-content-between">
-                      <input type="text" class="footer_contact_input" placeholder="Name" required="required">
-                      <input type="number" class="footer_contact_input" placeholder="Cellphone number" required="required">
-                    </div>
-                    <textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
-                    <button class="footer_contact_button">send message</button>
-
-                  </form>
-
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div> --}}
-
-  <div class="footer_bar">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="footer_bar_content d-flex flex-sm-row flex-column align-items-lg-center align-items-start justify-content-start">
-
-            <div class="col-lg-5 footer_col">
-              <div class="copyright">
-
-                <div class="footer_social">
-                  <ul class="d-flex flex-row align-items-center justify-content-start">
-                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    <div>Copyright &copy;2018 by BabesGotByte</div>
-                  </ul>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
