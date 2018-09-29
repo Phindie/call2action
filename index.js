@@ -60,6 +60,14 @@ app.post('/story/:id/make_public/:username', routes.makeStoryPublic);
 app.get('/stories/:username', routes.getStories);
 
 app.get('/shelters',routes.findShelters)
+app.get('/', function(req, res) {
+  res.render('login', {layout : 'login'});
+});
+
+app.post('/login', function(req, res) {
+  let username = req.body.username;
+  res.redirect(`/user/${username}/dashboard`);
+});
 
 // app.get('/statistics', routes.statistics);
 
