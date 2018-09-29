@@ -1,29 +1,73 @@
 module.exports = function () {
-  async function home(req, res) {
+  async function dashboard(req, res) {
+
     try {
 
-      res.render('index');
+      let stories = [];
+      let username = req.params.username;
+      let user = await createOrAddUser(username);
+      if (user) {
+        let userStoryResults = await pool.query('select * from stories where user_id = $1', [user.id]);
+        let userStories = userStoryResults.rows;
+      }
+
+      res.render('index', {
+        stories: userStories
+      });
     } catch (err) {
       res.send(err.stack);
     }
   }
-  async function showContacts(req, res) {
+
+  async function createOrAddUser(username) {
+
+    let user = null;
+    let userResults = await pool.query('select * from users where username = $1', [username])
+    if (userResults.rows.length > 0) {
+      user = userResults.rows[0];
+    } else {
+      // user should be added
+      let userAddResults = await pool.query(`insert 
+                          into users (username) values ($1)
+                          returning id, username`, [name]);
+      user = userAddResults.rows[0]
+    }
+    return user;
+  }
+
+  async function addStory(req, res) {
     try {
 
-      res.render('contact');
+      let username = req.params.username;
+      let user = await createOrAddUser(username);
+      if (user) {
+        let content = req.body.content;
+        await pool.query(`insert into stories 
+            (user_id, content, is_public) 
+            values ($1, $2, false)`, [user.id, content]);
+      }
+
+      // flash message - new story added
+
+
+      res.reidirect(`/user/${user.username}/dashboard`);
     } catch (err) {
       res.send(err.stack);
     }
   }
-  async function showEvents(req, res) {
-    try {
 
-      res.render('event');
+  async function makeStoryPublic(req, res) {
+    try {
+      const storyId = req.params.id;
+      await pool.query('update stories set is_public = true where id = $1', [storyId]);
+      // add flash message
+
     } catch (err) {
       res.send(err.stack);
     }
   }
-  async function showStaff(req, res) {
+
+  async function getStories(req, res) {
     try {
 
       res.render('login')
@@ -31,7 +75,8 @@ module.exports = function () {
       res.send(err.stack);
     }
   }
-  async function contactForm(req, res) {
+
+  async function statistics(req, res) {
     try {
       let name = req.body.name;
       let number = req.body.number;
@@ -39,8 +84,7 @@ module.exports = function () {
 
       if (message === '') {
         req.flash('info', 'No message please enter some message.')
-      }
-      else {
+      } else {
         req.flash('success', 'Message sent');
       }
 
@@ -49,39 +93,13 @@ module.exports = function () {
       res.send(err.stack);
     }
   }
-  async function report (req, res) {
-    try{
 
-        res.redirect('/');
-    } catch(err) {
-      res.send(err.stack);
-    }
-  }
-  async function signUp (req, res) {
-    try{
-
-      res.render('up');
-    } catch(err) {
-      res.send(err.stack);
-    }
-  }
-  async function up(req, res) {
-    try{
-
-      res.redirect('login');
-    } catch(err){
-      res.send(err.stack);
-    }
-  }
   return {
-    home,
-    showContacts,
-    showEvents,
-    showStaff,
-    contactForm,
-    report,
-    signUp,
-    up
+    dashboard,
+    addStory,
+    makeStoryPublic,
+    getStories,
+    statistics
   }
 
 }
