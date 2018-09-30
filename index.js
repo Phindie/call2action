@@ -58,12 +58,15 @@ app.post('/story/:id/make_public/:username', routes.makeStoryPublic);
 
 // show a users dashboard. Allow user to add stories & to see all there stories and to make some stories public
 app.get('/stories/:username', routes.getStories);
-
 app.get('/shelters',routes.findShelters)
 app.get('/shelters/filter/:search', routes.filterShelters)
 
 app.get('/', function(req, res) {
   res.render('login', {layout : 'login'});
+});
+
+app.get('/statistics', function(req, res) {
+  res.render('statistics');
 });
 
 app.post('/login', function(req, res) {
@@ -72,12 +75,10 @@ app.post('/login', function(req, res) {
 });
 
 // app.get('/statistics', routes.statistics);
-
 // app.post('/getHelp', routes.getHelp);
 // app.get('/shelters',routes.shelters);
 // app.get('/chat',routes.chattRoom);
 // app.get('/chat/dashboard',routes.chatRoomDashboard);
-
 
 const PORT = 2018;
 app.listen(PORT, function () {
