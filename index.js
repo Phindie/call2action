@@ -80,7 +80,7 @@ app.post('/login', function(req, res) {
 // app.get('/chat',routes.chattRoom);
 // app.get('/chat/dashboard',routes.chatRoomDashboard);
 
-const PORT = 2018;
+const PORT = process.env.PORT || 2018;
 app.listen(PORT, function () {
   console.log('Listening to port.... ' + PORT);
 });
