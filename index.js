@@ -35,8 +35,8 @@ app.use(express.static('public'));
 
 // should we use a SSL connection
 let useSSL = false;
-let local = process.env.LOCAL || false;
-if (process.env.DATABASE_URL && !local) {
+// let local = process.env.LOCAL || false;
+if (process.env.DATABASE_URL) {
   useSSL = true;
 }
 
